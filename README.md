@@ -22,6 +22,16 @@ Or install it yourself as:
 gem install gemika_seo_audit_gem
 ```
 
+## Alternate Installation
+
+Install the gem and add to the application's Gemfile by executing:
+
+    $ bundle add gemika_seo_audit_gem
+
+If bundler is not being used to manage dependencies, install the gem by executing:
+
+    $ gem install gemika_seo_audit_gem
+
 ## Usage
 
 To use the Gemika SEO Audit Gem in your Ruby application, you need to require it in your project:
@@ -33,7 +43,7 @@ require 'gemika_seo_audit_gem'
 You can perform a comprehensive SEO audit by using the following method:
 
 ```ruby
-results = GemikaSeoAuditGem.perform_audit("http://example.com")
+results = GemikaSeoAuditGem.perform_audit("https://example.com")
 puts results
 ```
 
@@ -82,32 +92,6 @@ This gem is available as open source under the terms of the MIT License.
 
 ```
 
-### Additional Considerations:
-- **Documentation and Examples**: The README provides clear examples on how to use the gem in various scenarios, which helps developers to integrate and utilize the gem effectively.
-- **Testing**: Encourage adding tests for the gem in the README under a potential "Development" or "Testing" section to guide contributors on how to run and write tests.
-
-This README follows the Ruby community's conventions for gem documentation, providing a thorough introduction to the gem's capabilities, instructions for installation, examples of usage, and integration guides for popular frameworks like Rails and Jekyll.
-
-# GemikaSeoAuditGem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gemika_seo_audit_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add gemika_seo_audit_gem
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install gemika_seo_audit_gem
-
-## Usage
-
-TODO: Write usage instructions here
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -116,7 +100,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/leonism/gemika_seo_audit_gem. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/gemika_seo_audit_gem/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/leonism/gemika_seo_audit_gem. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/leonism/gemika_seo_audit_gem/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
