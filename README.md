@@ -1,6 +1,7 @@
-# Elevate Your SEO Game with Gemika SEO Audit Gem
+# Gemika SEO Audit Gem
 
-Unlock the full potential of your website with the Gemika SEO Audit Gem. This powerful Ruby library is meticulously designed to enhance your website's search engine visibility. Featuring a suite of dynamic tools, from keyword analysis to mobile responsiveness checks and structured data validation, our gem empowers developers and marketers alike to identify SEO weaknesses and optimize them efficiently. Streamline your workflow and boost your rankings with just a few lines of code. Get ready to transform your site's SEO strategy and outshine your competitors with Gemika SEO Audit Gem!
+![screenshot](gemika_seo_audit_gem.png)
+Supercharge your website's performance with the Gemika SEO Audit Gem – a robust Ruby library meticulously crafted to elevate your online visibility. Packed with a comprehensive set of tools, from in-depth keyword insights to mobile responsiveness evaluations and structured data validation, our gem equips developers and marketers with the means to pinpoint SEO vulnerabilities and swiftly optimize them. Seamlessly integrate this powerhouse into your workflow with minimal code, and watch as your rankings soar. Elevate your site's SEO game and leave your competitors in the dust with the Gemika SEO Audit Gem
 
 ## Installation
 
