@@ -1,16 +1,26 @@
 # lib/seo_audit_gem/integration.rb
 module SeoAuditGem
   module Integration
-    # Example method to integrate with a Ruby on Rails application
-    def self.integrate_with_rails
-      puts "Integrating SEO audit features with Rails application..."
-      # Implement actual integration code here
-    end
+    class << self
+      # Integrates with a Ruby on Rails application
+      def integrate_with_rails
+        perform_integration('Rails application')
+      end
 
-    # Example method to integrate with Jekyll sites
-    def self.integrate_with_jekyll
-      puts "Integrating SEO audit features with Jekyll site..."
-      # Implement actual integration code here
+      # Integrates with Jekyll sites
+      def integrate_with_jekyll
+        perform_integration('Jekyll site')
+      end
+
+      private
+
+      # Performs the integration with the given platform
+      def perform_integration(platform)
+        puts "Integrating SEO audit features with #{platform}..."
+        # Implement actual integration code here
+      rescue StandardError => e
+        puts "Error during integration with #{platform}: #{e.message}"
+      end
     end
   end
 end

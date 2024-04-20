@@ -1,25 +1,27 @@
 # lib/seo_audit_gem/mobile_friendly.rb
 require 'faraday'
 require 'json'
+require 'yaml'
 
 module SeoAuditGem
   class MobileFriendly
-    API_URL = 'https://searchconsole.googleapis.com/v1/urlTestingTools/mobileFriendlyTest:run'
+    BASE_URL = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed'.freeze
 
     class << self
-      # Entry point for mobile-friendly check
-      def check(url, api_key)
-        response = make_request(url, api_key)
+      # Checks if a URL is mobile-friendly
+      def check(url)
+        api_key = load_api_key
+        response = fetch_response(url, api_key)
         parse_response(response)
       end
 
       private
 
-      # Makes a POST request to the Google Mobile-Friendly Test API
-      def make_request(url, api_key)
-        Faraday.post(API_URL, {url: url}.to_json, headers(api_key))
+      # Fetches the API response
+      def fetch_response(url, api_key)
+        Faraday.get(BASE_URL, { url: url }, headers(api_key))
       rescue Faraday::Error => e
-        puts "Error making request: #{e.message}"
+        handle_error("Error fetching response: #{e.message}")
         nil
       end
 
@@ -27,7 +29,7 @@ module SeoAuditGem
       def parse_response(response)
         JSON.parse(response.body)
       rescue JSON::ParserError => e
-        puts "Error parsing response: #{e.message}"
+        handle_error("Error parsing response: #{e.message}")
         nil
       end
 
@@ -38,6 +40,16 @@ module SeoAuditGem
           'X-Referer' => 'https://developers.google.com',
           'Authorization' => "Bearer #{api_key}"
         }
+      end
+
+      # Handles errors
+      def handle_error(message)
+        puts message
+      end
+
+      def load_api_key
+        config = YAML.load_file(File.join(__dir__, '..', '..', '..', 'config.yaml'))
+        config['mobile_friendly_api_key']
       end
     end
   end

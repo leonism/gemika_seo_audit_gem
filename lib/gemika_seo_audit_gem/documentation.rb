@@ -1,13 +1,16 @@
 # lib/seo_audit_gem/documentation.rb
 module SeoAuditGem
   module Documentation
+    HELP_TOPICS = {
+      'Keyword Analysis' => 'Help information for Keyword Analysis',
+      'Mobile-Friendliness Check' => 'Help information for Mobile-Friendliness Check',
+      'Structured Data Validation' => 'Help information for Structured Data Validation',
+      # Add more topics as needed...
+    }.freeze
+
     # Provides dynamic help based on method or feature
     def self.help(topic = nil)
-      if topic
-        lookup_help_for(topic)
-      else
-        general_help
-      end
+      topic ? lookup_help_for(topic) : general_help
     end
 
     class << self
@@ -15,13 +18,12 @@ module SeoAuditGem
 
       # Returns help information for a specific topic
       def lookup_help_for(topic)
-        # Example: Fetch help information from a local file or documentation source
-        "Help information for #{topic}"
+        HELP_TOPICS[topic] || "No help available for #{topic}"
       end
 
       # Returns general help information
       def general_help
-        "Available topics: Keyword Analysis, Mobile-Friendliness Check, Structured Data Validation, and more..."
+        "Available topics: #{HELP_TOPICS.keys.join(', ')}"
       end
     end
   end

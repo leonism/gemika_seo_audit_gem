@@ -1,8 +1,3 @@
-# git remote add origin https://github.com/leonism/gemika_seo_audit_gem.git
-# git branch -M main
-# git push -u origin main
-# lib/gemika_seo_audit_gem.rb
-
 # Require the necessary files in alphabetical order
 require_relative 'gemika_seo_audit_gem/backlink_analysis'
 require_relative 'gemika_seo_audit_gem/competitor_analysis'
@@ -59,3 +54,9 @@ module GemikaSeoAuditGem
     end
   end
 end
+
+
+# git remote add origin https://github.com/leonism/gemika_seo_audit_gem.git
+# git branch -M main
+# git push -u origin main
+# lib/gemika_seo_audit_gem.rb
